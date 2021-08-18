@@ -1,0 +1,17 @@
+﻿<Window x:Class="CanvasDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CanvasDemo"
+        mc:Ignorable="d"
+        Title="Canvas面板" Height="300" Width="300">
+    <Canvas>
+        <!--设置附加属性：Left、Top、Right、Bottom 否则会默认显示在左上角-->
+        <Button Canvas.Left="194" Canvas.Bottom="100" Canvas.Top="153" Canvas.ZIndex="1" Name="btn" >Button</Button>
+        <!--Canvas面板中有多个相互重叠的元素，可以设置Canvas的ZIndex附加属性，来控制他们的重叠方式 ZIndex属性默认值都是0 
+        只要Button按钮的ZIndex属性的值大于DataGrid的ZIndex属性的值即可显示Button按钮-->
+        <Button  Canvas.Left="86" Canvas.Top="49" Width="141" Name="btnClick" Click="btnClick_Click" >点击修改ZIndex属性</Button>
+        <DataGrid Canvas.Left="170" Canvas.Top="130" Height="75" Width="90" Name="Dg"/>
+    </Canvas>
+</Window>

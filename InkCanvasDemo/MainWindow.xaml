@@ -1,0 +1,23 @@
+﻿<Window x:Class="InkCanvasDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InkCanvasDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="400" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <ComboBox Name="EditingMode" Margin="5" SelectionChanged="EditingMode_SelectionChanged">
+                
+            </ComboBox>
+        </StackPanel>
+        <InkCanvas Name="inkCanvas" Grid.Row="1" EditingMode="None" Background="BurlyWood">
+            <Button InkCanvas.Left="50" InkCanvas.Top="180" Content="Button1"></Button>
+        </InkCanvas>
+    </Grid>
+</Window>
